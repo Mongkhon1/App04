@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="purple">
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-searchbar></ion-searchbar>
+  <ion-segment value="select">
+    <ion-segment-button value="select">
+      <ion-label>Select</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="toggle">
+      <ion-label>Toggle</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-list>
+    <ion-item>
+      <ion-select aria-label="Fruit" interface="popover" placeholder="Select fruit">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="presentToast('middle')">Present Toast At the Middle</ion-button>
+  <div class="toggle">
+    <ion-toggle [enableOnOffLabels]="true">Enable Notifications</ion-toggle>
+  </div>
+
+</ion-content>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <div class="fab">
+    <ion-fab-button color="menu">
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="blue">
+        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="orange">
+        <ion-icon name="color-palette"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="green">
+        <ion-icon name="globe"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </div>
+</ion-fab>
